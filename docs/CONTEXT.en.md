@@ -26,6 +26,8 @@ Translation verification: local links and complete code fences, matching section
 
 ## Checked behavior
 
+The user supplied a LiveSplit.AutoSplitters CI log: 507 tests passed and one failed because the description exceeded 120 characters. The registration snippet description was shortened and the limit documented in both publishing guides. Local verification checks XML and length; the external suite was not run here and the catalog PR was not updated. The ASL is unchanged. Next step: apply the corrected snippet to the PR and rerun its CI.
+
 | Flow | Available evidence | Limit of the check |
 | --- | --- | --- |
 | Speedrun START in Furi | User tested start in LiveSplit; replay from menu | START timing was not measured with subsecond precision |

@@ -14,6 +14,8 @@ Prepared on 2026-10-07 for **1.0.0**, signed by **Neimex23**. This guide and the
 
 ## 2. Requesting availability when selecting Furi
 
+The catalog CI requires `<Description>` to contain at most **120 characters**. Keep that limit when editing the XML snippet.
+
 LiveSplit describes registration through a pull request to its XML catalog, which its maintainers review and merge. [Official procedure](https://github.com/LiveSplit/LiveSplit.AutoSplitters#adding-an-auto-splitter).
 
 1. Open [LiveSplit.AutoSplitters.xml](https://github.com/LiveSplit/LiveSplit.AutoSplitters/blob/master/LiveSplit.AutoSplitters.xml) and search for `Furi`. No exact entry was found in the 2026-10-07 lookup; check again before submitting. If one already exists, coordinate an update without duplicating the name.

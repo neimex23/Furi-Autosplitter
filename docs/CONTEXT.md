@@ -26,6 +26,8 @@ Verificación de la traducción: enlaces locales y bloques de código completos,
 
 ## Estado comprobado
 
+El usuario aportó un log del CI de LiveSplit.AutoSplitters: 507 tests pasaron y uno falló porque la descripción excedía 120 caracteres. Se acortó la descripción del fragmento de alta y se documentó el límite en ambas guías de publicación. La comprobación local valida XML y longitud; no se ejecutó aquí la suite externa ni se actualizó el PR del catálogo. No cambia el ASL. Próximo paso: trasladar el fragmento corregido al PR y repetir su CI.
+
 | Flujo | Evidencia disponible | Límite de la comprobación |
 | --- | --- | --- |
 | START de Carrera Furi | Usuario probó inicio en LiveSplit; reproducción desde menú | No se midió el instante de START con precisión subsegundo |
