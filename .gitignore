@@ -1,0 +1,18 @@
+# Local research, raw game IL dumps and generated release packages
+/local/
+/dist/
+
+# Personal LiveSplit layouts and split histories saved at the repo root
+/*.lsl
+/*.lss
+
+# Editor settings and temporary/build output
+.vs/
+.vscode/
+bin/
+obj/
+*.tmp
+*.bak
+*.user
+Thumbs.db
+Desktop.ini
