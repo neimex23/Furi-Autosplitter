@@ -1,12 +1,14 @@
 # Cómo contribuir
 
+Español | [English](CONTRIBUTING.en.md)
+
 Para entender el estado del proyecto, empezar por [docs/CONTEXT.md](docs/CONTEXT.md). Allí se separan las decisiones vigentes, pruebas en vivo, reproducciones e hipótesis. [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) explica cómo ejecutar las herramientas.
 
 ## Reportar o comprobar comportamiento
 
-No se necesita programar ni usar Cheat Engine para probar la beta. Usar [REPORTAR-ERROR.md](REPORTAR-ERROR.md) o la plantilla de issue del repo. Registrar versión del ASL y LiveSplit, build del juego, modo, dificultad, personaje/DLC, opciones habilitadas, pasos y reloj del juego frente a Game Time.
+No se necesita programar ni usar Cheat Engine para probar el autosplitter. Usar [REPORTAR-ERROR.md](REPORTAR-ERROR.md) o la plantilla de issue del repo. Registrar versión del ASL y LiveSplit, build del juego, modo, dificultad, personaje/DLC, opciones habilitadas, pasos y reloj del juego frente a Game Time.
 
-Para una transición, observar resultados y siguiente arena: debe detenerse según el reloj del juego, no dividir en resultados, dividir una vez cuando la arena esté lista y continuar el total acumulado. Indicar si se usó invencibilidad propia del juego, salto de fases o modificaciones.
+Para una transición con opciones predeterminadas, observar resultados y siguiente arena: debe detenerse según el reloj del juego, no dividir en resultados de jefes intermedios, dividir una vez cuando la arena esté lista y continuar el total acumulado. Con resultados o fases habilitados, comprobar sus eventos correspondientes. Indicar si se usó invencibilidad propia del juego, salto de fases o modificaciones.
 
 Comparar **Game Time** en LiveSplit. Real Time puede continuar mientras el cronómetro del juego está detenido. Después de una run terminada, resetear manualmente antes del intento siguiente. Evitar recargar el ASL durante la run que se está midiendo.
 
@@ -30,10 +32,10 @@ Para nuevas capacidades:
 
 | Ampliación | Trabajo necesario |
 | --- | --- |
-| Cierre automático | Señal observada en Carrera final, tiempo correcto, una sola división y exclusión de menú/carga/reinicio/Práctica |
+| Victoria final | Comprobar en Carrera el split en resultados de MOTHERSHIP/Furi y BERNARD/Furiosa, tiempo correcto, una sola división y exclusión de menú/carga/reinicio; Práctica habilitada tiene su propio split de victoria |
 | Otra build | Hashes, offsets/rutas y tipos corroborados tras reiniciar, regresiones y prueba en vivo; conservar el filtro de compatibilidad |
 | DLC/personaje/ruta | IDs y orden efectivo, arenas omitidas o repetidas, continuidad del reloj y deduplicación adecuada |
-| Historia o Práctica | Definir START, reset, límite del segmento y Game Time propios; separar la lógica de Carrera y comprobar que no interfiera |
+| Historia o ampliar Práctica | Práctica opcional ya inicia en una nueva arena lista y divide en victoria; nuevos reinicios/rutas o Historia requieren definir START, reset, límite y Game Time sin interferir con Carrera |
 | Otra plataforma | Identificar runtime, arquitectura y acceso a memoria; no asumir que las rutas de Windows sirven |
 
 Añadir casos de regresión que reproduzcan el problema y los falsos positivos relevantes. El harness actual está en `tests/ReproducirRegistro.cs`; utiliza el componente real de LiveSplit con muestras grabadas/sintéticas y un timer aislado. Su `init` necesita Furi compatible abierto. La reproducción valida lógica; las nuevas rutas necesitan pruebas en vivo.
@@ -42,7 +44,7 @@ Ejecutar compilación y reproducción siguiendo [DEVELOPMENT.md](docs/DEVELOPMEN
 
 ## Entregar una contribución
 
-Describir el problema, el nuevo comportamiento, la evidencia, las verificaciones y la cobertura pendiente. La plantilla de pull request ayuda a dejar ese contexto. Para un cambio de comportamiento, actualizar `docs/CONTEXT.md`; para una release, actualizar versión y documentos públicos, `CHANGELOG.md` y generar el ZIP con `tools/Empaquetar.ps1`.
+Describir el problema, el nuevo comportamiento, la evidencia, las verificaciones y la cobertura pendiente. La plantilla de pull request ayuda a dejar ese contexto. Para un cambio de comportamiento, actualizar ambas versiones de idioma de `docs/CONTEXT.md`; para una release, actualizar versión, documentos públicos y ambos changelogs, y generar el ZIP con `tools/Empaquetar.ps1`.
 
 Conservar la distinción entre «reportado por el jugador», «observado en registro», «caso sintético» e «hipótesis». Documentar datos nuevos sin convertirlos en garantías más amplias que la prueba.
 

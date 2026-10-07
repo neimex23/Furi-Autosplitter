@@ -1,5 +1,7 @@
 # Inspección opcional
 
+Español | [English](README.en.md)
+
 Ejecutar con Windows PowerShell 5.1 desde la raíz del repo, usando las rutas propias:
 
 ```powershell

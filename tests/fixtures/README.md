@@ -1,5 +1,7 @@
 # Registro de prueba: Chain → Strap
 
+Español | [English](README.en.md)
+
 `chain-strap.txt` es un registro de memoria obtenido durante una sesión de investigación el **2026-10-06**, en **Extras > Carrera**, dificultad **Furi (1)**. Se copió del registro original al organizar el repositorio.
 
 Incluye intentos nuevos, pausas/pérdida de foco, un reinicio y la victoria de Chain seguida de la carga de Strap. En el intento de la victoria, el puntero de partida permanece estable mientras el nivel cambia de LAW a NEMESIS. Durante parte de la transición, el GM anterior conserva la señal de victoria; luego aparecen huecos, el GM nuevo, Loading y Normal con Chrono.
